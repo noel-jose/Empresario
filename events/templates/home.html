@@ -1,0 +1,31 @@
+{% extends 'base.html' %}   
+
+{% block body %}
+<div class="events-section container" style="padding-top: 150px;" id="events">
+
+  <h1 class="font-bold text-4xl text-center pt-03 tracking-tight" style="font-family: 'Monstserrat', sans-serif; color: #428DE8">Events</h1>
+  <main class="grid" style="padding-top: 50px;">
+    {% for event in events%}
+
+
+    <article>
+      <img src="{{event.event_image}}" alt="Sample photo">
+      <br>
+      <div class="text">
+        <h3 style="font-family: 'CS', sans-serif; font-weight:500; letter-spacing: -1px;">{{event.name}}</h3>
+        <p>{{event.description}} <!-- <br /><span style="color: red; text-transform: uppercase; font-weight: 500; margin-top: 2rem; display: inline-block; ">Prize Worth: ₹10,000<sup>*</sup></span> -->
+        </p>
+        <!-- <p style="color: crimson; text-transform: uppercase; font-weight: 500; ">Prize Worth: ₹10,000<sup>*</sup></p> -->
+        <div><br><span class="event-prize">Prize Worth: {{event.prize_amount}}<sup>*</sup></span>
+          <br>
+          <a href='form/' >Register</a></div>
+      </div>
+    </article>
+
+
+    {% endfor %}
+    
+  </main>
+</div>
+
+{% endblock body %}

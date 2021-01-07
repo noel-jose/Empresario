@@ -1,0 +1,16 @@
+{% extends 'base.html' %}    
+    
+{% block body %}
+
+
+<h1>Register</h1>
+<hr>
+<form action ="" method="POST">
+    {% csrf_token %}
+    
+    <p>{{ form.as_p }}</p>
+    <input type="submit">
+</form>
+
+
+{% endblock body %}
