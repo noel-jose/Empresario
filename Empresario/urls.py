@@ -23,7 +23,7 @@ from .settings import STATIC_ROOT,STATIC_URL
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home),
-    path('form/',registration)
+    path('',home,name = "home"),
+    path('form/',registration,name = "form")
 
 ] + static(STATIC_URL,document_root = STATIC_ROOT)
